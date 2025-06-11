@@ -1,0 +1,9 @@
+.git
+node_modules
+dist
+*.log
+.vscode
+.idea
+test
+coverage
+tmp

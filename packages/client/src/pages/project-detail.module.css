@@ -1,0 +1,77 @@
+.draggedTask {
+  opacity: 0.5;
+  transform: rotate(2deg);
+  transition: all 0.2s ease;
+}
+
+.dropZone {
+  transition: all 0.2s ease;
+}
+
+.dropZoneActive {
+  background-color: #f8f9fa;
+  border: 2px dashed #228be6 !important;
+}
+
+.taskCard {
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.taskCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.taskCard:active {
+  cursor: grabbing;
+}
+
+.gripIcon {
+  color: #868e96;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.taskCard:hover .gripIcon {
+  opacity: 1;
+}
+
+.emptyDropZone {
+  height: 80px;
+  border: 2px dashed #ced4da;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #868e96;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.emptyDropZone:hover {
+  border-color: #228be6;
+  background-color: #f8f9fa;
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+  .taskCard {
+    padding: 8px;
+  }
+
+  .taskCard:hover {
+    transform: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .emptyDropZone {
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .gripIcon {
+    opacity: 1;
+  }
+}

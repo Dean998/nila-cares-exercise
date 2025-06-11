@@ -1,0 +1,7 @@
+docker build -t nila-api:latest .
+
+docker run -p 3000:3000 -e PORT=3000 nila-api:latest
+
+docker tag nila-api:latest europe-west2-docker.pkg.dev/nila-core/main/nila-api:latest
+
+docker push europe-west2-docker.pkg.dev/nila-core/main/nila-api:latest
